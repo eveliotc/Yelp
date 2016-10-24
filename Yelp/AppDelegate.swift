@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AFNetworking.AFNetworkActivityIndicatorManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        UINavigationBar.appearance().backgroundColor = Colors.main
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        UIBarButtonItem.appearance().tintColor = UIColor.white
+        
+        AFNetworkActivityIndicatorManager.shared().isEnabled = true
+        
         return true
     }
 
